@@ -13,7 +13,8 @@
             padding: 0;
             box-sizing: border-box;
             overflow-x: hidden;
-            background-color: #ffb703; /* Pale orange background */
+            background-color: #219ebc; /* Dark blue background */
+            position: relative; /* For positioning blobs */
         }
         .navbar {
             display: flex;
@@ -69,12 +70,14 @@
         }
         .background {
             padding: 100px 20px;
+            position: relative;
+            z-index: 2; /* Higher z-index for the content */
         }
 
         .dog-project {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center; /* Center the content */
             margin: 100px 0; /* Increased spacing */
             transform: rotate(-3deg); /* Diagonal placement */
             animation: fadeInSlideIn 1s ease forwards;
@@ -84,12 +87,12 @@
             transform: rotate(3deg); /* Opposite diagonal for even items */
         }
         .dog-slideshow {
-            position: absolute;
             width: 300px;
             height: 200px;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
         .dog-slideshow img {
             width: 100%;
@@ -97,32 +100,32 @@
             object-fit: cover;
             position: absolute;
             opacity: 0;
-            animation: fadeInOut 5s infinite;
+            animation: fadeInOut 10s infinite;
         }
         .dog-slideshow img:nth-child(1) {
             animation-delay: 0s;
         }
         .dog-slideshow img:nth-child(2) {
-            animation-delay: 1.25s;
-        }
-        .dog-slideshow img:nth-child(3) {
             animation-delay: 2.5s;
         }
+        .dog-slideshow img:nth-child(3) {
+            animation-delay: 5s;
+        }
         .dog-slideshow img:nth-child(4) {
-            animation-delay: 3.75s;
+            animation-delay: 7.5s;
         }
         .dog-bio {
-            max-width: 400px;
+            max-width: 500px;
             color: #000080; /* Navy text */
             padding: 20px;
             background-color: #f5f5f5;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-left: 400px; /* Move bio closer to the image */
+            margin-left: 20px; /* Adjust margin for spacing */
         }
         .dog-project:nth-child(even) .dog-bio {
             margin-left: 0;
-            margin-right: 400px; /* Adjust for even items */
+            margin-right: 20px; /* Adjust for even items */
         }
         @keyframes fadeInSlideIn {
             0% {
@@ -135,12 +138,28 @@
             }
         }
         @keyframes fadeInOut {
-            0%, 100% {
+            0%, 20%, 100% {
                 opacity: 0;
             }
-            25%, 75% {
+            10%, 90% {
                 opacity: 1;
             }
+        }
+        .blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background-color: #023047; /* Darker blue for blobs */
+            border-radius: 50%;
+            z-index: 1; /* Lower z-index for the blobs */
+        }
+        .blob.left {
+            top: 50px;
+            left: 50px;
+        }
+        .blob.right {
+            top: 600px;
+            right: 50px;
         }
     </style>
 </head>
@@ -184,5 +203,7 @@
         </div>
         <!-- Add more dog projects as needed -->
     </div>
+    <div class="blob left"></div>
+    <div class="blob right"></div>
 </body>
 </html>
