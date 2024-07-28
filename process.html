@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e7ac4d; /* Pale orange background */
+            color: #000080; /* Navy text */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* White background for navbar */
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 50px; /* Adjust the height of the logo as needed */
+            cursor: pointer;
+        }
+        .navbar nav {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #ffffff; /* White background for dropdown */
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .dropdown-content a {
+            color: #000080; /* Navy text */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #e7ac4d; /* Pale orange background on hover */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content {
+            background-color: #ffffff; /* White text box */
+            color: #000080; /* Navy text */
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 100px auto 0 auto; /* Center content and ensure it is below the navbar */
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            letter-spacing: 1.5px;
+            animation: slideInFromTop 1s ease-in-out;
+        }
+        ol {
+            text-align: left;
+            margin: 20px auto;
+            padding: 0;
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+        ol li {
+            margin: 10px 0;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        ol li::marker {
+            font-size: 1.5em;
+            color: #219ebc; /* Blue for numbers */
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .images img {
+            margin: 10px;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <a href="index.html"><img src="banner (1) (1).svg" alt="Logo"></a>
+            <div class="dropdown-content">
+                <a href="contact.html">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="process.html">Our Process</a>
+                <a href="#">Support Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Our Process</h1>
+        <ol>
+            <li>After you contact us and let us know what kind of condition your pet has, we'll begin drafting prosthetics and schedule an initial meetup to take measurements</li>
+            <li>We'll begin to work on a prototype. within the next few weeks, we'll ask to meet up 2-3 more times for fittings.</li>
+            <li>Once we finish perfecting our prototype, we'll begin to build the final model.</li>
+            <li>If for any reason you are not satisfied with the results, or you encounter any problems with the prosthetic, you're more than welcome to contact us again to get it fixed :)</li>
+        </ol>
+        <div class="images">
+            <img src="will_sidepic2.png" alt="Dog 1">
+            <img src="will_sweetpic1.jpg" alt="Dog 2">
+            <img src="img_9649.jpg" alt="Dog 3">
+            <img src="img_9644.jpg" alt="Dog 4">
+        </div>
+    </div>
+</body>
+</html>
