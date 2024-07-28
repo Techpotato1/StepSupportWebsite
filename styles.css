@@ -1,0 +1,33 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: green;
+}
+
+li {
+   float: left;
+   display: inline; 
+}
+
+a {
+    display: block;
+    padding: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
