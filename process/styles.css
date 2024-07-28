@@ -11,32 +11,11 @@ body {
     box-sizing: border-box;
 }
 
-ol {
-    text-align: left;
-    margin: 20px auto;
-    padding: 0;
-    max-width: 600px;
-    font-size: 1.2em;
-}
-
-ol li {
-    margin: 10px 0;
-    padding-left: 1.5em;
-    position: relative;
-}
-
-ol li::marker {
-    font-size: 1.5em;
-    color: #219ebc;
-    /* Blue for numbers */
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    list-style-type: none;
     /* White background for navbar */
     padding: 10px 20px;
     position: fixed;
@@ -55,11 +34,6 @@ ol li::marker {
 .navbar nav {
     display: flex;
     align-items: center;
-}
-
-.logo {
-    height: inherit;
-    width: auto;
 }
 
 .dropdown {
@@ -100,40 +74,78 @@ ol li::marker {
     background-color: darkgrey;
 }
 
-.landingbody {
-    left: 0;
-    position: absolute;
-    padding-top: 100px;
-}
-
-.header {
-    background-color: #f1f1f1;
-    text-align: center;
-}
-
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: left;
-    width: 100vw;
-    padding-left: 50px;
-}
-
-.header-image {
-    width: 100vw;
-    object-fit: cover;
-}
-
-.footer-content {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+.content {
+    background-color: #ffffff;
+    /* White text box */
+    color: #000080;
+    /* Navy text */
+    border-radius: 15px;
+    padding: 40px;
     width: 100%;
+    max-width: 900px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 100px auto 0 auto;
+    /* Center content and ensure it is below the navbar */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+ol {
+    text-align: left;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 600px;
+    font-size: 1.2em;
+}
+
+ol li {
+    margin: 10px 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+ol li::marker {
+    font-size: 1.5em;
+    color: #219ebc;
+    /* Blue for numbers */
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.images img {
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
