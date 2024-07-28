@@ -1,33 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Past Projects</title>
-</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            background-color: #2d547b; /* Dark blue background */
+            position: relative; /* For positioning blobs */
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 50px;
+            cursor: pointer;
+        }
+        .navbar nav {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .dropdown-content a {
+            color: #000080;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #e7ac4d;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .background {
+            padding: 100px 20px;
+            position: relative;
+            z-index: 2; /* Higher z-index for the content */
+        }
+
+        .dog-project {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content */
+            margin: 100px 0; /* Increased spacing */
+            transform: rotate(-3deg); /* Diagonal placement */
+            animation: fadeInSlideIn 1s ease forwards;
+        }
+        .dog-project:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: rotate(3deg); /* Opposite diagonal for even items */
+        }
+        .dog-slideshow {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .dog-slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            animation: fadeInOut 20s infinite;
+        }
+        .dog-slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .dog-slideshow img:nth-child(2) {
+            animation-delay: 5s;
+        }
+        .dog-slideshow img:nth-child(3) {
+            animation-delay: 10s;
+        }
+        .dog-slideshow img:nth-child(4) {
+            animation-delay: 15s;
+        }
+        .dog-bio {
+            max-width: 500px;
+            color: #000080; /* Navy text */
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-left: 20px; /* Adjust margin for spacing */
+        }
+        .dog-project:nth-child(even) .dog-bio {
+            margin-left: 0;
+            margin-right: 20px; /* Adjust for even items */
+        }
+        @keyframes fadeInSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInOut {
+            0%, 25%, 100% {
+                opacity: 0;
+            }
+            5%, 20% {
+                opacity: 1;
+            }
+        }
+        .blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background-color: #023047; /* Darker blue for blobs */
+            border-radius: 50%;
+            z-index: 1; /* Lower z-index for the blobs */
+        }
+        .blob.left {
+            top: 50px;
+            left: 50px;
+        }
+        .blob.right {
+            top: 600px;
+            right: 50px;
+        }
+    </style>
+</head>
 <body>
     <div class="navbar">
-        <a href="/index.html"><img src="/images/banner.svg" alt="Logo"></a>
-        <button class="dropdown">
-            <i class="fas fa-bars"></i>
+        <div class="dropdown">
+            <a href="index.html"><img src="banner (1) (1).svg" alt="Logo"></a>
             <div class="dropdown-content">
-                <a href="/process/">Process</a>
-                <a href="/past/">Past</a>
-                <a href="/contact/">Contact</a>
-                <a href="/support/">Support</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="process.html">Our Process</a>
+                <a href="support.html">Support Us</a>
+                <a href="past.html">Past Dogs</a>
             </div>
+        </div>
     </div>
     <div class="background">
         <div class="dog-project" style="margin-top: 150px;"> <!-- Added margin to the first project -->
             <div class="dog-slideshow">
-                <img src="/images/dogs/IMG_9644.jpg" alt="Dog 1">
-                <img src="/images/dogs/IMG_9649.jpg" alt="Dog 1">
-                <img src="/images/dogs/will_sidepic2.png" alt="Dog 1">
-                <img src="/images/dogs/will_sweetpic1.jpg" alt="Dog 1">
+                <img src="IMG_9644.jpg" alt="Dog 1">
+                <img src="IMG_9649.jpg" alt="Dog 1">
+                <img src="will_sidepic2.png" alt="Dog 1">
+                <img src="will_sweetpic1.jpg" alt="Dog 1">
             </div>
             <div class="dog-bio">
                 <h2>Will</h2>
@@ -36,19 +191,19 @@
         </div>
         <div class="dog-project" style="margin-top: 150px;"> <!-- Increased spacing for scrolling effect -->
             <div class="dog-slideshow">
-                <img src="/images/dogs/IMG_9644.jpg" alt="Dog 2">
-                <img src="/images/dogs/IMG_9649.jpg" alt="Dog 2">
-                <img src="/images/dogs/will_sidepic2.png" alt="Dog 2">
-                <img src="/images/dogs/will_sweetpic1.jpg" alt="Dog 2">
+                <img src="IMG_9644.jpg" alt="Dog 2">
+                <img src="IMG_9649.jpg" alt="Dog 2">
+                <img src="will_sidepic2.png" alt="Dog 2">
+                <img src="will_sweetpic1.jpg" alt="Dog 2">
             </div>
             <div class="dog-bio">
                 <h2>Rocky</h2>
-                <p>Meet Rocky! Just like Rocky Balboa, Rocky never quits no matter what. He might have no control over
-                    his hind legs but we helped him run and live life to the fullest!</p>
+                <p>Meet Rocky! Just like Rocky Balboa, Rocky never quits no matter what. He might have no control over his hind legs but we helped him run and live life to the fullest!</p>
             </div>
         </div>
         <!-- Add more dog projects as needed -->
     </div>
+    <div class="blob left"></div>
+    <div class="blob right"></div>
 </body>
-
 </html>
