@@ -62,7 +62,7 @@
         }
 
         .dropdown-content a {
-            color: #000080;
+            color: #023047;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -98,16 +98,84 @@
         }
 
         .mission-statement {
+            box-sizing: border-box;
             flex: 1;
             margin-right: 20px;
-            color: #0000ff;
-            /* Navy text */
-            background-color: #f5f5f5;
+            color: #023047;
+            background-color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             min-height: 300px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mission-statement h2 {
+            margin-top: 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: auto;
+            padding-top: 60px;
+        }
+
+        .mission-statement a {
+            --color: #023047;
+            font-family: inherit;
+            display: inline-block;
+            width: 8em;
+            height: 2.6em;
+            line-height: 2.5em;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color);
+            transition: color .5s;
+            z-index: 1;
+            font-size: 17px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--color);
+            margin-right: 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .mission-statement a:last-child {
+            margin-right: 0;
+        }
+
+        .mission-statement a:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: var(--color);
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .mission-statement a:hover {
+            color: #fff;
+        }
+
+        .mission-statement a:before {
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
+        }
+
+        .mission-statement a:hover:before {
+            top: -30px;
+            left: -30px;
+        }
+
+        .mission-statement a:active:before {
+            background: #000080;
+            transition: background 0s;
         }
 
         .dog-slideshow {
@@ -243,6 +311,10 @@
                 <h2>Our Mission</h2>
                 <p>Our mission is to provide high-quality prosthetic solutions to dogs in need, helping them lead
                     happier, more active lives.</p>
+                <div class="button-container">
+                    <a href="">Support Us</a>
+                    <a href="">Contact Us</a>
+                </div>
             </div>
             <div class="dog-slideshow">
                 <img src="images/dogs/IMG_9644.png" alt="Dog 1">
@@ -251,11 +323,12 @@
                 <img src="images/dogs/will_sweetpic1.png" alt="Dog 4">
             </div>
         </div>
-        <!-- Buttons moved to a fixed position on the left -->
+        <!-- !!! Not Used !!!
         <div class="buttons">
             <a href="support/support.html">Support Us</a>
             <a href="contact/contact.html">Contact Us</a>
         </div>
+        -->
     </div>
 </body>
 
