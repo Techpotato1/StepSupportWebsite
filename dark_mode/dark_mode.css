@@ -1,0 +1,50 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    /* Blunt but works */
+    font-size: 35px !important; 
+    transition: transform 0.5s ease;
+}
+
+.dark-mode-toggle:hover .material-symbols-outlined {
+    transform: rotate(360deg);
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    color: #000080; /* Match the color of other navbar items */
+    text-decoration: none;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .dropdown-content {
+    background-color: #222;
+}
+
+body.dark-mode .dropdown-content a,
+body.dark-mode .dark-mode-toggle {
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #ffc107;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 84vw; /* This creates space between dropdown and dark mode toggle */
+}
