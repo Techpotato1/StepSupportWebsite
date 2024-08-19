@@ -6,253 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="icon" type="image/x-icon" href="../images/new_favicon.png">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../dark_mode/dark_mode.css">
+    <link rel="stylesheet" href="../navbar.css">
     <script src="../dark_mode/dark_mode_test.js"></script>
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
-        body {
-            font-family: 'Lexend', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow-x: hidden;
-            background-color: #ffffff;
-            /* Prevent scrollbar/keep contact page on one page */
-            overflow: hidden;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: #ffffff;
-            /* White background for navbar */
-            padding: 10px 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        .navbar img {
-            height: 50px;
-            /* Adjust the height of the logo as needed */
-            cursor: pointer;
-        }
-
-        .navbar nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            background-color: #ffffff;
-            /* White background for dropdown */
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .dropdown-content a {
-            color: #000080;
-            /* Navy text */
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #e7ac4d;
-            /* Pale orange background on hover */
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .background {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            overflow: hidden;
-            padding-left: 50px;
-            padding-top: 50px;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-
-        .circle-big {
-            position: absolute;
-            right: -450px;
-            /* Move more to the left */
-            width: 1400px;
-            height: 1400px;
-            background: radial-gradient(circle, #ff9800, #ffc107);
-            /* Big circle with gradient */
-            border-radius: 50%;
-            animation: fadeIn 3s ease-in-out forwards;
-        }
-
-        .circle-small {
-            position: absolute;
-            background: #ff9800;
-            /* Small orange circles */
-            border-radius: 50%;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-
-        .circle-small-outside {
-            position: absolute;
-            background: #023047;
-            /* Small orange circles */
-            border-radius: 50%;
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-
-        .circle-small.circle1 {
-            width: 100px;
-            height: 100px;
-            top: 30%;
-            right: 300px;
-        }
-
-        .circle-small.circle2 {
-            width: 75px;
-            height: 75px;
-            top: 50%;
-            right: 350px;
-        }
-
-        .circle-small.circle3 {
-            width: 50px;
-            height: 50px;
-            top: 70%;
-            right: 250px;
-        }
-
-        .circle-small-outside.circle4 {
-            width: 100px;
-            height: 100px;
-            top: 70%;
-            right: 1000px;
-        }
-
-        .circle-small-outside.circle5 {
-            width: 75px;
-            height: 75px;
-            top: 50%;
-            right: 900px;
-        }
-
-        .content {
-            position: absolute;
-            top: 50px;
-            left: 150px;
-            /* Increased from 50px to 150px */
-            background-color: transparent;
-            color: #000080;
-            padding: 40px;
-            text-align: left;
-            z-index: 10;
-            animation: slideInLeft 1.5s ease-in-out forwards;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            font-size: 4em;
-            /* Bigger font size for "Contact Us" */
-            letter-spacing: 1.5px;
-            color: #000080;
-            /* Navy text */
-        }
-
-        .contact-info {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .email-info {
-            position: absolute;
-            top: 50%;
-            left: 70%;
-            /* Adjusted to 70% to move it more to the right */
-            transform: translate(0, -50%);
-            font-size: 1.5em;
-            color: #000080;
-            text-align: left;
-            line-height: 2em;
-            animation: slideInRight 2s ease-in-out forwards;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInLeft {
-            0% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            0% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <div class="navbar">
-        <div class="dropdown">
-            <a href="../home.html"><img src="../images/banner.svg" alt="Logo"></a>
-            <div class="dropdown-content">
-                <a href="../contact/contact.html">Contact Us</a>
-                <a href="../about/about.html">About Us</a>
-                <a href="../process/process.html">Our Process</a>
-                <a href="../support/support.html">Support Us</a>
-                <a href="../past/past.html">Past Dogs</a>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <a href="../home.html"><img src="../images/banner.svg" alt="Logo"></a>
+                <div class="dropdown-content">
+                    <a href="../contact/contact.html">Contact Us</a>
+                    <a href="../about/about.html">About Us</a>
+                    <a href="../process/process.html">Our Process</a>
+                    <a href="../support/support.html">Support Us</a>
+                    <a href="../past/past.html">Past Dogs</a>
+                </div>
             </div>
+            <a href="#" class="dark-mode-toggle">
+                <span class="material-symbols-outlined" id="mode-icon">dark_mode</span>
+            </a>
         </div>
-        <a href="#" class="dark-mode-toggle">
-            <span class="material-symbols-outlined" id="mode-icon">dark_mode</span>
-        </a>
     </div>
     <div class="background">
         <div class="content">
@@ -266,13 +44,16 @@
         <div class="circle-small-outside circle5"></div>
         <div class="email-info">
             <div>
-                <a href="mailto:step.sup.soc@gmail.com" style="text-decoration: none; color: black;" target="_blank">Email: step.sup.soc@gmail.com</a>
+                <a href="mailto:step.sup.soc@gmail.com" style="text-decoration: none; color: black;"
+                    target="_blank">Email: step.sup.soc@gmail.com</a>
             </div>
             <div>
-                <a href="https://www.instagram.com/step.supportsociety/?hl=en" style="text-decoration: none; color: black;" target="_blank">Instagram: @step.support.society</a>
+                <a href="https://www.instagram.com/step.supportsociety/?hl=en"
+                    style="text-decoration: none; color: black;" target="_blank">Instagram: @step.support.society</a>
             </div>
             <div>
-                <a href="tel:+16504409283" style="text-decoration: none; color: black;" target="_blank">Phone: +1 (650) (440)-(9283)</a>
+                <a href="tel:+16504409283" style="text-decoration: none; color: black;" target="_blank">Phone: +1 (650)
+                    (440)-(9283)</a>
             </div>
         </div>
     </div>
