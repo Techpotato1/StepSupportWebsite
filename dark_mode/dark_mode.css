@@ -19,18 +19,23 @@
     text-decoration: none;
 }
 
-body.dark-mode {
+body.dark-mode{
     background-color: #333;
     color: #fff;
 }
 
 body.dark-mode .navbar,
-body.dark-mode .dropdown-content {
+body.dark-mode .dropdown-content,
+body.dark-mode .mission-statement,
+body.dark-mode .dog-bio,
+body.dark-mode .content {
     background-color: #222;
 }
 
 body.dark-mode .dropdown-content a,
-body.dark-mode .dark-mode-toggle {
+body.dark-mode .dark-mode-toggle,
+body.dark-mode p,
+body.dark-mode .content {
     color: #fff;
 }
 
@@ -39,8 +44,12 @@ body.dark-mode header {
 }
 
 body.dark-mode h1,
-body.dark-mode h2 {
+body.dark-mode h2{
     color: #ffc107;
+}
+
+body.dark-mode .mission-statement a{
+    --color: #ffc107;
 }
 
 .navbar-right {
