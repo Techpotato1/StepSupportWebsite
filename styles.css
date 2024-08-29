@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
     background-color: #2d547b;
     /* Pale orange background */
+    overflow: hidden; /* !!! Remove the ability to scroll !!!*/
 }
 
 .navbar {
