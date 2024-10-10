@@ -15,8 +15,9 @@
 
 .dark-mode-toggle {
     cursor: pointer;
-    color: #000080; /* Match the color of other navbar items */
+    color: black; /* Match the color of other navbar items */
     text-decoration: none;
+    margin-left: auto;
 }
 
 body.dark-mode{
@@ -53,8 +54,18 @@ body.dark-mode .mission-statement a{
     --color: #ffc107;
 }
 
-.navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 84vw; /* This creates space between dropdown and dark mode toggle */
+body.dark-mode .user-icon {
+    color: #fff;
+}
+
+body.dark-mode .user-dropdown-content {
+    background-color: #222;
+}
+
+body.dark-mode .user-dropdown-content a {
+    color: #fff;
+}
+
+body.dark-mode .user-dropdown-content a:hover {
+    background-color: #444;
 }
