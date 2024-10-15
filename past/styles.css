@@ -10,6 +10,7 @@ body {
     /* Dark blue background */
     position: relative;
     /* For positioning blobs */
+    overflow: hidden;
 }
 
 .navbar {

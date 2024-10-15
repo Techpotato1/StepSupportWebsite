@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>About Us</title>
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="../dark_mode/dark_mode.css">
@@ -13,24 +14,27 @@
 </head>
 
 <body>
-<div class="navbar">
-    <div class="navbar-right">
+    <div class="navbar">
+        <a href="../index.html"><img src="../images/banner.svg" alt="Logo"></a>
         <div class="dropdown">
-            <a href="../index.html"><img src="../images/banner.svg" alt="Logo"></a>
-            <div class="dropdown-content">
-                <a href="../contact/contact.html">Contact Us</a>
-                <a href="../about/about.html">About Us</a>
-                <a href="../process/process.html">Our Process</a>
-                <a href="../support/support.html">Support Us</a>
-                <a href="../past/past.html">Past Dogs</a>
-            </div>
+            <button style="cursor: pointer;">
+                <i class="fas fa-bars" style="font-size: 40px;"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-menu">
+                    <a href="../index.html">Home</a>
+                    <a href="../contact/contact.html">Contact Us</a>
+                    <a href="../about/about.html">About Us</a>
+                    <a href="../process/process.html">Our Process</a>
+                    <a href="../support/support.html">Support Us</a>
+                    <a href="../past/past.html">Past Dogs</a>
+                </div>
         </div>
+
         <a href="#" class="dark-mode-toggle">
             <span class="material-symbols-outlined" id="mode-icon">dark_mode</span>
         </a>
     </div>
-</div>
-
+    
     <main>
         <header>
             <h1>About Step Support</h1>
