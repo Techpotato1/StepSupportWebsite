@@ -11,32 +11,6 @@ body {
     overflow: hidden;
 }
 
-.navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #ffffff;
-    /* White background for navbar */
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-.navbar img {
-    height: 50px;
-    /* Adjust the height of the logo as needed */
-    cursor: pointer;
-}
-
-.navbar nav {
-    display: flex;
-    align-items: center;
-}
-
 .background {
     position: relative;
     width: 100%;

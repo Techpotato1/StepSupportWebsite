@@ -23,7 +23,7 @@
 }
 
 body.dark-mode{
-    background-color: #333;
+    background-color: #333 !important;
     color: #fff;
 }
 
@@ -32,7 +32,7 @@ body.dark-mode .dropdown-content,
 body.dark-mode .mission-statement,
 body.dark-mode .dog-bio,
 body.dark-mode .content,
-body.dark-mode .dropdown {
+body.dark-mode .dropdown{
     background-color: #222;
 }
 
