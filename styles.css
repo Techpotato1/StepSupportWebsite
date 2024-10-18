@@ -253,3 +253,42 @@ p {
         opacity: 1;
     }
 }
+
+.mobile-warning {
+    display: none; /* Hidden by default */
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mobile-warning h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.mobile-warning p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Show warning only on screens smaller than 768px (typical mobile breakpoint) */
+@media screen and (max-width: 768px) {
+    .mobile-warning {
+        display: block;
+    }
+
+    /* Add padding to body to prevent content from hiding behind the warning */
+    body {
+        padding-top: 100px;
+    }
+}

@@ -117,10 +117,10 @@ h1 {
 .email-info {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 58%;
     /* Adjusted to 70% to move it more to the right */
     transform: translate(0, -50%);
-    font-size: 1.5em;
+    font-size: 2em;
     color: #023047;
     text-align: left;
     line-height: 2em;

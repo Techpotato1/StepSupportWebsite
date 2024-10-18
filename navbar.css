@@ -22,13 +22,13 @@
 }
 
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
     font-size: 20px;
     border: none;
     background-color: white;
     padding-right: 30px;
-    left: 82vw;
+    left: 92%;
     text-align: left;
 }
 
@@ -83,3 +83,15 @@
     outline: none;
   }
   
+  .dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner_logo {
+    height: 100px;
+}

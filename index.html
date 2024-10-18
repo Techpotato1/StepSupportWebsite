@@ -17,8 +17,12 @@
 
 
 <body>
+    <div class="mobile-warning">
+        <h4>⚠️ Mobile Device/Small Viewport Detected</h4>
+        <p>This page is optimized for desktop viewing (16/9). Some features may be limited in this screen size.</p>
+    </div>
     <div class="navbar">
-        <a href="../index.html"><img src="../images/banner.svg" alt="Logo"></a>
+        <a href="../index.html"><img src="../images/full_logo.png" alt="Step Support Logo"></a>
         <div class="dropdown">
             <button style="cursor: pointer; color: var(--dark-mode-text-color);">
                 <i class="fas fa-bars"></i>
@@ -57,6 +61,25 @@
             </div>
         </div>
     </div>
+    <script>
+        // Add this script at the end of your body tag or in a separate .js file
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            
+            // Toggle dropdown when button is clicked
+            dropdownButton.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent event from bubbling up
+                dropdownContent.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking anywhere else on the page
+            document.addEventListener('click', function(e) {
+                if (!dropdownButton.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });</script>
 </body>
 
 </html>
