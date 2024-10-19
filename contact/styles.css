@@ -98,6 +98,7 @@ body {
     text-align: left;
     z-index: 10;
     animation: slideInLeft 1.5s ease-in-out forwards;
+    font-size: 1.2em;
 }
 
 h1 {
@@ -120,7 +121,7 @@ h1 {
     left: 58%;
     /* Adjusted to 70% to move it more to the right */
     transform: translate(0, -50%);
-    font-size: 2em;
+    font-size: 2.7em;
     color: #023047;
     text-align: left;
     line-height: 2em;
