@@ -8,7 +8,8 @@ body {
     overflow-x: hidden;
     background-color: #2d547b;
     /* Pale orange background */
-    overflow: hidden; /* !!! Remove the ability to scroll !!!*/
+    overflow: hidden;
+    /* !!! Remove the ability to scroll !!!*/
 }
 
 h2 {
@@ -255,7 +256,8 @@ p {
 }
 
 .mobile-warning {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     background-color: #fff3cd;
     border: 1px solid #ffeeba;
     color: #856404;
@@ -268,7 +270,7 @@ p {
     left: 0;
     right: 0;
     z-index: 999999999;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-warning h4 {
@@ -292,6 +294,13 @@ p {
         padding-top: 100px;
     }
 }
+
+@media only screen and (max-width: 1366px) {
+    body {
+        zoom: 0.87
+    }
+}
+
 .mobile-warning {
     position: relative;
     padding: 10px;

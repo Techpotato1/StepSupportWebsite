@@ -117,15 +117,14 @@ h1 {
 
 .email-info {
     position: absolute;
-    top: 50%;
-    left: 58%;
+    top: 70%;
+    left: 20%;
     /* Adjusted to 70% to move it more to the right */
-    transform: translate(0, -50%);
-    font-size: 2.7em;
+    transform: translate(0, 50%);
+    font-size: 1.7em;
     color: #023047;
     text-align: left;
     line-height: 2em;
-    animation: slideInRight 2s ease-in-out forwards;
 }
 
 /* Animations */
