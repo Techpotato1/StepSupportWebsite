@@ -31,3 +31,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         setDarkMode(isDarkMode);
     });
 });
+
+function adjustZoom() {
+    const maxViewportWidth = 1920;
+    const minZoom = 0.8; // Minimum zoom level
+    const maxZoom = 1; // Maximum zoom level
+
+    const currentWidth = window.innerWidth;
+    let zoomLevel = currentWidth / maxViewportWidth;
+
+    // Clamp zoom level between minZoom and maxZoom
+    zoomLevel = Math.max(minZoom, Math.min(zoomLevel, maxZoom));
+
+    document.body.style.zoom = zoomLevel;
+}
+
+window.addEventListener('resize', adjustZoom);
+window.addEventListener('load', adjustZoom);

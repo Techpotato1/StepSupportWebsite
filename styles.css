@@ -295,12 +295,6 @@ p {
     }
 }
 
-@media only screen and (max-width: 1366px) {
-    body {
-        zoom: 0.87
-    }
-}
-
 .mobile-warning {
     position: relative;
     padding: 10px;
