@@ -18,14 +18,17 @@
 
 <body>
     <div class="mobile-warning">
+        <button class="close-button" onclick="this.parentElement.style.display='none';">&times;</button>
         <h4>⚠️ Mobile Device/Small Viewport Detected</h4>
         <p>This page is optimized for desktop viewing (16/9). Some features may be limited in this screen size.</p>
     </div>
+    
     <div class="navbar">
         <a href="../index.html"><img src="../images/full_logo.png" alt="Step Support Logo"></a>
-        <div class="dropdown">
-            <button style="cursor: pointer; color: var(--dark-mode-text-color);">
-                <i class="fas fa-bars"></i>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <button style="cursor: pointer; color: var(--dark-mode-text-color);">
+                    <i class="fas fa-bars"></i>
                 </button>
                 <div class="dropdown-content" id="dropdown-menu">
                     <a href="#">Home</a>
@@ -35,11 +38,11 @@
                     <a href="../support/support.html">Support Us</a>
                     <a href="../past/past.html">Past Dogs</a>
                 </div>
+            </div>
+            <a href="#" class="dark-mode-toggle">
+                <span class="material-symbols-outlined" id="mode-icon">dark_mode</span>
+            </a>
         </div>
-
-        <a href="#" class="dark-mode-toggle">
-            <span class="material-symbols-outlined" id="mode-icon">dark_mode</span>
-        </a>
     </div>
 
     <div class="container">
@@ -79,7 +82,8 @@
                     dropdownContent.classList.remove('show');
                 }
             });
-        });</script>
+        });
+    </script>
 </body>
 
 </html>

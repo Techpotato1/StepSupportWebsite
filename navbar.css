@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
     padding: 10px 20px;
@@ -9,6 +9,11 @@
     top: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
 }
 
 .navbar img {
@@ -22,13 +27,12 @@
 }
 
 .dropdown {
-    position: absolute;
+    position: relative;
     display: inline-block;
     font-size: 20px;
     border: none;
     background-color: white;
     padding-right: 30px;
-    left: 92%;
     text-align: left;
 }
 
@@ -69,29 +73,28 @@
     transform: translateY(0);
 }
 
-  /* Style for the dropdown button */
 .dropdown button {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 40px;
-    outline: none; /* This removes the focus outline */
-  }
-  
-  /* Additional rule for accessibility */
-  .dropdown button:focus {
     outline: none;
-  }
-  
-  .dropdown-content.show {
-    display: block;
+}
+
+.dropdown button:focus {
+    outline: none;
 }
 
 .dropdown-content.show {
+    display: block;
     opacity: 1;
     visibility: visible;
 }
 
 .banner_logo {
     height: 100px;
+}
+
+.dark-mode-toggle {
+    margin-left: 10px; /* Ensure at least 20px space from the previous element */
 }

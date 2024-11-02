@@ -98,6 +98,7 @@ body {
     text-align: left;
     z-index: 10;
     animation: slideInLeft 1.5s ease-in-out forwards;
+    font-size: 1.2em;
 }
 
 h1 {
