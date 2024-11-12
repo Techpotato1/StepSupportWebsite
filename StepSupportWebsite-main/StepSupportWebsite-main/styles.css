@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #2d547b;
+    /* Pale orange background */
+    overflow: hidden;
+    /* !!! Remove the ability to scroll !!!*/
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 800px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.mission-statement {
+    box-sizing: border-box;
+    flex: 1;
+    margin-right: 20px;
+    color: #023047;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-statement h2 {
+    margin-top: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
+    padding-top: 60px;
+}
+
+.mission-statement a {
+    --color: #023047;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    margin-right: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.mission-statement a:last-child {
+    margin-right: 0;
+}
+
+.mission-statement a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.mission-statement a:hover {
+    color: #fff;
+}
+
+.mission-statement a:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.mission-statement a:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.mission-statement a:active:before {
+    background: #000080;
+    transition: background 0s;
+}
+
+.dog-slideshow {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    /* Adjusted size */
+    height: 300px;
+    /* Adjusted size */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dog-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeInOut 16s infinite;
+}
+
+.dog-slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dog-slideshow img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.dog-slideshow img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.dog-slideshow img:nth-child(4) {
+    animation-delay: 12s;
+}
+
+.buttons {
+    position: relative;
+    /* Fixed position for left side */
+    left: -35%;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure buttons stay on top */
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #000080;
+    /* Navy background */
+    text-decoration: none;
+    border-radius: 30px;
+    /* Dog biscuit shape */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    min-width: 120px;
+    /* Minimum width for better appearance */
+}
+
+/* Fancy color transitions */
+.buttons a:hover {
+    background-color: #e7ac4d;
+    /* Pale orange on hover */
+}
+
+.buttons span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+.buttons::before,
+.buttons::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.buttons:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    25%,
+    100% {
+        opacity: 0;
+    }
+
+    5%,
+    20% {
+        opacity: 1;
+    }
+}
+
+.mobile-warning {
+    display: none;
+    /* Hidden by default */
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-warning h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.mobile-warning p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Show warning only on screens smaller than 768px (typical mobile breakpoint) */
+@media screen and (max-width: 768px) {
+    .mobile-warning {
+        display: block;
+    }
+
+    /* Add padding to body to prevent content from hiding behind the warning */
+    body {
+        padding-top: 100px;
+    }
+}
+
+.mobile-warning {
+    position: relative;
+    padding: 10px;
+    background-color: #ffcc00;
+    border: 1px solid #ff9900;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
