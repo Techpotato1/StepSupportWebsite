@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    /* Prevent scrollbar/keep contact page on one page */
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-top: 50px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.circle-big {
+    position: absolute;
+    right: -450px;
+    /* Move more to the left */
+    width: 1400px;
+    height: 1400px;
+    background: radial-gradient(circle, #ff9800, #ffc107);
+    /* Big circle with gradient */
+    border-radius: 50%;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+.circle-small {
+    position: absolute;
+    background: #ff9800;
+    /* Small orange circles */
+    border-radius: 50%;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.circle-small-outside {
+    position: absolute;
+    background: #023047;
+    /* Small orange circles */
+    border-radius: 50%;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.circle-small.circle1 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 300px;
+}
+
+.circle-small.circle2 {
+    width: 75px;
+    height: 75px;
+    top: 50%;
+    right: 350px;
+}
+
+.circle-small.circle3 {
+    width: 50px;
+    height: 50px;
+    top: 70%;
+    right: 250px;
+}
+
+.circle-small-outside.circle4 {
+    width: 100px;
+    height: 100px;
+    top: 70%;
+    right: 1000px;
+}
+
+.circle-small-outside.circle5 {
+    width: 75px;
+    height: 75px;
+    top: 50%;
+    right: 900px;
+}
+
+.contact {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    /* Increased from 50px to 150px */
+    background-color: transparent;
+    color: #023047;
+    padding: 40px;
+    text-align: left;
+    z-index: 10;
+    animation: slideInLeft 1.5s ease-in-out forwards;
+    font-size: 1.2em;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 6em;
+    /* Bigger font size for "Contact Us" */
+    letter-spacing: 1.5px;
+    color: #023047;
+    /* Navy text */
+}
+
+.contact-info {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.email-info {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    /* Adjusted to 70% to move it more to the right */
+    transform: translate(0, 50%);
+    font-size: 1.7em;
+    color: #023047;
+    text-align: left;
+    line-height: 2em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
